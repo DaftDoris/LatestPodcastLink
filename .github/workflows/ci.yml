@@ -48,6 +48,7 @@ jobs:
   #         environment: dev
 
   deploy:
+    name: prod deploy
     needs:
       - build
     if: ${{ github.ref == 'refs/heads/main' }}
