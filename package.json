@@ -6,7 +6,8 @@
   "scripts": {
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
-    "test": "jest --config jestconfig.json --verbose"
+    "test": "jest --config jestconfig.json --verbose",
+    "dev": "wrangler dev"
   },
   "author": "chris@cns.me.uk",
   "license": "MIT",
