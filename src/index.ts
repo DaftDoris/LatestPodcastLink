@@ -29,7 +29,6 @@ export async function handleRequest(request: Request): Promise<Response> {
     }
     return Response.redirect(destinationURL, statusCode)
 
-    return new Response(`Hello World ${destinationURL}`)
   } catch (error) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore TS2571: Object is possibly 'undefined'.
