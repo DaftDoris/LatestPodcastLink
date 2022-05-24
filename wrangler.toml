@@ -2,3 +2,4 @@ name = "latestpodcastlink"
 compatibility_date = "2022-05-23"
 main = "src/index.ts"
 account_id = "c5c3784dc4d91ad007f052f83c17e2ac"
+node_compat = true

@@ -1,3 +1,5 @@
+import * as htmlparser2 from 'htmlparser2'
+
 export default {
   fetch: handleRequest,
 }
@@ -15,7 +17,27 @@ export async function handleRequest(request: Request): Promise<Response> {
     if (site.toLowerCase() === 'google') {
       destinationURL = 'foo'
     } else if (site.toLowerCase() === 'spotify') {
-      destinationURL = 'foo'
+      const response = await fetch(`https://open.spotify.com/show/${showid}`, {
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36',
+        },
+      })
+
+      const html = await response.text()
+      const parser = new htmlparser2.Parser({
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onopentag(name: string, attributes: any) {
+          if (
+            name === 'meta' &&
+            attributes.property === 'music:song' &&
+            !destinationURL
+          )
+            destinationURL = attributes.content
+        },
+      })
+      parser.write(html)
+      parser.end()
     } else if (site.toLowerCase() === 'apple') {
       const response = await fetch(
         `https://itunes.apple.com/lookup?id=${showid}&media=podcast&entity=podcastEpisode&limit=1`,
