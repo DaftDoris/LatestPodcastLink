@@ -17,7 +17,6 @@ export async function handleRequest(request: Request): Promise<Response> {
     } else if (site.toLowerCase() === 'spotify') {
       destinationURL = 'foo'
     } else if (site.toLowerCase() === 'apple') {
-      destinationURL = 'foo'
       const response = await fetch(
         `https://itunes.apple.com/lookup?id=${showid}&media=podcast&entity=podcastEpisode&limit=1`,
       )
