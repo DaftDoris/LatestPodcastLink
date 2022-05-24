@@ -13,7 +13,7 @@ export async function handleRequest(request: Request): Promise<Response> {
   try {
     if (path.length !== 4) throw new Error('Invalid path')
 
-    let destinationURL
+    let destinationURL = ''
     if (site.toLowerCase() === 'google') {
       destinationURL = 'foo'
     } else if (site.toLowerCase() === 'spotify') {
@@ -50,7 +50,6 @@ export async function handleRequest(request: Request): Promise<Response> {
       throw new Error('Invalid site')
     }
     return Response.redirect(destinationURL, statusCode)
-
   } catch (error) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore TS2571: Object is possibly 'undefined'.
