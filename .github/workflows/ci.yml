@@ -59,7 +59,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - run: npm install
-      - uses: cloudflare/wrangler-action@168bc28b7078db16f6f1ecc26477fc2248592143 # v3.8
+      - uses: cloudflare/wrangler-action@9681c2997648301493e78cacbfb790a9f19c833f # v3.9
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           
