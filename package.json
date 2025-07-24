@@ -28,7 +28,7 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20250723.0",
+    "@cloudflare/workers-types": "4.20250724.0",
     "@types/jest": "30.0.0",
     "@types/service-worker-mock": "2.0.4",
     "@typescript-eslint/eslint-plugin": "8.38.0",
