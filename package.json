@@ -46,6 +46,6 @@
     "typescript": "5.9.3",
     "webpack": "5.105.4",
     "webpack-cli": "7.0.2",
-    "wrangler": "4.75.0"
+    "wrangler": "4.76.0"
   }
 }
