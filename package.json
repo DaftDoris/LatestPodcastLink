@@ -43,7 +43,7 @@
     "service-worker-mock": "2.0.5",
     "ts-jest": "29.4.9",
     "ts-loader": "9.5.7",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "webpack": "5.106.1",
     "webpack-cli": "7.0.2",
     "wrangler": "4.82.2"
